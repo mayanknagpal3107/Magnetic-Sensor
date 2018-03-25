@@ -1,0 +1,111 @@
+   1               		.file	"mg.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB7:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 D098      		cbi 58-32,0
+  25               	.LM3:
+  26 0002 A39A      		sbi 52-32,3
+  27               	.LM4:
+  28 0004 AB9A      		sbi 53-32,3
+  29 0006 88E8      		ldi r24,lo8(5000)
+  30 0008 93E1      		ldi r25,hi8(5000)
+  31               	.LVL0:
+  32               	.LBB18:
+  33               	.LBB19:
+  34               	.LBB20:
+  35               	.LBB21:
+  36               	.LM5:
+  37 000a 20E9      		ldi r18,lo8(400)
+  38 000c 31E0      		ldi r19,hi8(400)
+  39               	.L2:
+  40 000e F901      		movw r30,r18
+  41               	.LVL1:
+  42               	/* #APP */
+  43               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  44 0010 3197      		1: sbiw r30,1
+  45 0012 01F4      		brne 1b
+  46               	 ;  0 "" 2
+  47               	/* #NOAPP */
+  48               	.LBE21:
+  49               	.LBE20:
+  50               	.LM6:
+  51 0014 0197      		sbiw r24,1
+  52               	.LM7:
+  53 0016 01F4      		brne .L2
+  54               	.LBE19:
+  55               	.LBE18:
+  56               	.LM8:
+  57 0018 AB98      		cbi 53-32,3
+  58               	.LBB22:
+  59               	.LBB23:
+  60               	.LBB24:
+  61               	.LBB25:
+  62               	.LM9:
+  63 001a 20E9      		ldi r18,lo8(400)
+  64 001c 31E0      		ldi r19,hi8(400)
+  65               	.LVL2:
+  66               	.L9:
+  67               	.LBE25:
+  68               	.LBE24:
+  69               	.LBE23:
+  70               	.LBE22:
+  71               	.LM10:
+  72 001e C89B      		sbis 57-32,0
+  73 0020 00C0      		rjmp .L3
+  74               	.LM11:
+  75 0022 A89A      		sbi 53-32,0
+  76 0024 88E8      		ldi r24,lo8(5000)
+  77 0026 93E1      		ldi r25,hi8(5000)
+  78               	.LVL3:
+  79               	.L4:
+  80               	.LBB29:
+  81               	.LBB28:
+  82               	.LBB27:
+  83               	.LBB26:
+  84               	.LM12:
+  85 0028 F901      		movw r30,r18
+  86               	.LVL4:
+  87               	/* #APP */
+  88               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  89 002a 3197      		1: sbiw r30,1
+  90 002c 01F4      		brne 1b
+  91               	 ;  0 "" 2
+  92               	/* #NOAPP */
+  93               	.LBE26:
+  94               	.LBE27:
+  95               	.LM13:
+  96 002e 0197      		sbiw r24,1
+  97               	.LM14:
+  98 0030 01F4      		brne .L4
+  99 0032 00C0      		rjmp .L9
+ 100               	.LVL5:
+ 101               	.L3:
+ 102               	.LBE28:
+ 103               	.LBE29:
+ 104               	.LM15:
+ 105 0034 AB98      		cbi 53-32,3
+ 106 0036 00C0      		rjmp .L9
+ 107               	.LFE7:
+ 133               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 mg.c
+C:\Users\ROBOLAB\AppData\Local\Temp/ccUfLY5l.s:2      *ABS*:0000003f __SREG__
+C:\Users\ROBOLAB\AppData\Local\Temp/ccUfLY5l.s:3      *ABS*:0000003e __SP_H__
+C:\Users\ROBOLAB\AppData\Local\Temp/ccUfLY5l.s:4      *ABS*:0000003d __SP_L__
+C:\Users\ROBOLAB\AppData\Local\Temp/ccUfLY5l.s:5      *ABS*:00000034 __CCP__
+C:\Users\ROBOLAB\AppData\Local\Temp/ccUfLY5l.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\ROBOLAB\AppData\Local\Temp/ccUfLY5l.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\ROBOLAB\AppData\Local\Temp/ccUfLY5l.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS
